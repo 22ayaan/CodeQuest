@@ -2,22 +2,31 @@ import React from "react";
 
 const OutputDetails = ({ outputDetails }) => {
   return (
-    <div className="metrics-container mt-4 flex flex-col space-y-3">
+    <div className="flex flex-col mt-4 space-y-3 metrics-container">
       <p className="text-sm">
-        Status:{" "}
-        <span className="font-semibold px-2 py-1 rounded-md bg-gray-100">
+        Submission:{" "}
+        <span className="px-2 py-1 font-semibold bg-gray-100 rounded-md">
+          {outputDetails?.status?.description === "Accepted" &&
+          atob(outputDetails?.stdout).trim() === "helloworld"
+            ? `Correct`
+            : `Incorrect`}
+        </span>
+      </p>
+      <p className="text-sm">
+        Execution Status:{" "}
+        <span className="px-2 py-1 font-semibold bg-gray-100 rounded-md">
           {outputDetails?.status?.description}
         </span>
       </p>
       <p className="text-sm">
         Memory:{" "}
-        <span className="font-semibold px-2 py-1 rounded-md bg-gray-100">
+        <span className="px-2 py-1 font-semibold bg-gray-100 rounded-md">
           {outputDetails?.memory}
         </span>
       </p>
       <p className="text-sm">
         Time:{" "}
-        <span className="font-semibold px-2 py-1 rounded-md bg-gray-100">
+        <span className="px-2 py-1 font-semibold bg-gray-100 rounded-md">
           {outputDetails?.time}
         </span>
       </p>
