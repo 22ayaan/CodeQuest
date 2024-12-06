@@ -36,7 +36,7 @@ const OutputWindow = ({ outputDetails }) => {
   };
   return (
     <>
-      <h1 className="mb-2 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700">
+      <h1 className="mb-2 text-xl font-bold text-transparent text-white bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700">
         Output:
       </h1>
       <div className="w-full h-56 bg-[#010306] rounded-md text-white font-normal text-sm overflow-y-auto">
