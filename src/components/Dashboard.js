@@ -1,14 +1,32 @@
 import React from "react";
 import Header from "./Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { questions } from "../constants/questions";
+import { useState, useEffect } from "react";
 
 const Dashboard = () => {
+  const [fname, setFname] = useState(null);
+  // const navigate = useNavigate();
+
+  useEffect(() => {
+    const fname = localStorage.getItem("fname");
+    if (fname) {
+      setFname(fname);
+    }
+    // else {
+    //   navigate("/sign-up");
+    // }
+  }, []);
   return (
     <div>
       <Header />
       <div className="w-full h-screen p-4 mx-auto bg-stone-800 grow">
         <div className="mx-auto w-full grow p-4 md:max-w-[888px] md:p-6 lg:max-w-screen-xl">
+          {fname ? (
+            <p className="mb-6 text-3xl font-bold tracking-wide">Hi {fname} 👋</p>
+          ) : (
+            <></>
+          )}
           <div>
             <p className="text-[20px] font-medium text-gray-300 mb-8">Problemset</p>
             <div className="grid grid-cols-3 gap-4">
