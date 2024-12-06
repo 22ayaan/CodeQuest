@@ -14,6 +14,7 @@ import OutputDetails from "./OutputDetails";
 import ThemeDropdown from "./ThemeDropdown";
 import LanguagesDropdown from "./LanguagesDropdown";
 import { javascriptDefault } from "../constants/questions";
+import Header from "./Header";
 
 const Landing = () => {
   const [code, setCode] = useState(javascriptDefault);
@@ -178,7 +179,7 @@ const Landing = () => {
         draggable
         pauseOnHover
       />
-
+      <Header />
       <div className="flex flex-row">
         <div className="px-4 py-2">
           <LanguagesDropdown onSelectChange={onSelectChange} />
@@ -204,7 +205,7 @@ const Landing = () => {
               onClick={handleCompile}
               // disabled={!code}
               className={classnames(
-                "mt-4 border-2 border-black z-10 rounded-md px-4 py-2 hover:bg-slate-100 transition duration-200 bg-white flex-shrink-0",
+                "text-black mt-4 border-2 border-black z-10 rounded-md px-4 py-2 hover:bg-slate-100 transition duration-200 bg-white flex-shrink-0",
                 !code ? "opacity-50" : ""
               )}
             >

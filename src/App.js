@@ -1,6 +1,7 @@
 import "./App.css";
 import Dashboard from "./components/Dashboard";
-import Landing from "./components/Landing";
+import SandboxWindow from "./components/SandboxWindow";
+import SignUp from "./components/SignUp";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="problems/two-sum" element={<Landing />} />
+        <Route path="sign-up" element={<SignUp />} />
+        <Route path="problems/two-sum" element={<SandboxWindow />} />
+        <Route path="*" element={<Dashboard />} />
       </Routes>
     </>
   );
