@@ -12,8 +12,8 @@ const OutputDetails = ({ outputDetails }) => {
         <span className="px-2 py-1 font-semibold rounded-md bg-stone-700">
           {outputDetails?.status?.description === "Accepted" &&
           atob(outputDetails?.stdout).trim() === "6"
-            ? Correct
-            : Incorrect}
+            ? `Correct`
+            : `Incorrect`}
         </span>
       </p>
       <p className="text-sm">

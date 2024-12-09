@@ -15,7 +15,7 @@ console.log(res);
 export const questions = [
   {
     id: 1,
-    title: "sum of 2 numbers",
+    title: "Sum of 2 numbers",
     diff: "Easy",
     style: "!text-teal-400 font-semibold",
     desc: "Given 2 integers, return the sum of those integers.",
