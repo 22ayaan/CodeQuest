@@ -72,7 +72,7 @@ const Dashboard = () => {
               )}
               {solvedProblems[0].solvedStatus && (
                 <Link to="/problems/two-sum">
-                  <div className="relative flex items-start px-3 py-2 duration-300 rounded-lg cursor-pointer thumbnail-box-bg">
+                  <div className="relative flex items-start px-3 py-2 duration-300 rounded-lg cursor-pointer bg-slate-600">
                     <img
                       src="./thumbnail.png"
                       alt="thumbnail"
