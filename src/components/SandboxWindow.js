@@ -180,39 +180,41 @@ const Landing = () => {
         pauseOnHover
       />
       <Header />
-      <div className="flex flex-row">
-        <div className="px-4 py-2">
-          <LanguagesDropdown onSelectChange={onSelectChange} />
-        </div>
-        <div className="px-4 py-2">
-          <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
-        </div>
-      </div>
-      <div className="flex flex-row items-start px-4 py-4 space-x-4">
-        <div className="flex flex-col items-end justify-start w-full h-full">
-          <CodeEditorWindow
-            code={code}
-            onChange={onChange}
-            language={language?.value}
-            theme={theme.value}
-          />
-        </div>
-
-        <div className="right-container flex flex-shrink-0 w-[30%] flex-col">
-          <OutputWindow outputDetails={outputDetails} />
-          <div className="flex flex-col items-end">
-            <button
-              onClick={handleCompile}
-              // disabled={!code}
-              className={classnames(
-                "text-black mt-4 border-2 border-black z-10 rounded-md px-4 py-2 hover:bg-slate-100 transition duration-200 bg-white flex-shrink-0",
-                !code ? "opacity-50" : ""
-              )}
-            >
-              {processing ? "Processing..." : "Run"}
-            </button>
+      <div className="h-screen bg-stone-800 ">
+        <div className="flex flex-row">
+          <div className="px-4 py-2">
+            <LanguagesDropdown onSelectChange={onSelectChange} />
           </div>
-          {outputDetails && <OutputDetails outputDetails={outputDetails} />}
+          <div className="px-4 py-2">
+            <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
+          </div>
+        </div>
+        <div className="flex flex-row items-start px-4 py-4 space-x-4">
+          <div className="flex flex-col items-end justify-start w-full h-full">
+            <CodeEditorWindow
+              code={code}
+              onChange={onChange}
+              language={language?.value}
+              theme={theme.value}
+            />
+          </div>
+
+          <div className="right-container flex flex-shrink-0 w-[30%] flex-col">
+            <OutputWindow outputDetails={outputDetails} />
+            <div className="flex flex-col items-end">
+              <button
+                onClick={handleCompile}
+                // disabled={!code}
+                className={classnames(
+                  "text-black mt-4 border-2 border-black z-10 rounded-md px-4 py-2 hover:bg-slate-100 transition duration-200 bg-white flex-shrink-0",
+                  !code ? "opacity-50" : ""
+                )}
+              >
+                {processing ? "Processing..." : "Run"}
+              </button>
+            </div>
+            {outputDetails && <OutputDetails outputDetails={outputDetails} />}
+          </div>
         </div>
       </div>
     </>
