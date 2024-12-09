@@ -180,7 +180,7 @@ const Landing = () => {
         pauseOnHover
       />
       <Header />
-      <div className="h-screen bg-stone-800 ">
+      <div className="h-screen bg-slate-800 ">
         <div className="flex flex-row">
           <div className="px-4 py-2">
             <LanguagesDropdown onSelectChange={onSelectChange} />

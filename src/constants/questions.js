@@ -64,6 +64,6 @@ export let solvedProblems = [
     title: "sum of 2 numbers",
     diff: "Easy",
     style: "!text-teal-400 font-semibold",
-    desc: "Given 2 integers, return the sum of those integers.",
+    desc: "Given 2 integers num1 and num2, return the sum of those integers. If you can't do this you might have room temperature IQ.",
   },
 ];

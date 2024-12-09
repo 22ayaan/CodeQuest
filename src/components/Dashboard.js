@@ -19,7 +19,7 @@ const Dashboard = () => {
   return (
     <div>
       <Header />
-      <div className="w-full h-screen p-4 mx-auto bg-stone-800 grow">
+      <div className="w-full h-screen p-4 mx-auto bg-slate-800 grow">
         <div className="mx-auto w-full grow p-4 md:max-w-[888px] md:p-6 lg:max-w-screen-xl">
           {fname ? (
             <p className="mb-6 text-3xl font-bold tracking-wide">Hi {fname} 👋</p>
@@ -33,7 +33,7 @@ const Dashboard = () => {
                 <Link to="/problems/two-sum">
                   <div
                     key={item}
-                    className="relative flex items-start px-3 py-2 duration-300 rounded-lg cursor-pointer thumbnail-box-bg"
+                    className="relative flex items-start px-3 py-2 duration-300 rounded-lg cursor-pointer bg-slate-700"
                   >
                     <img
                       src="./thumbnail.png"
@@ -47,7 +47,7 @@ const Dashboard = () => {
                             {item?.title}
                           </p>
                         </div>
-                        <div className="px-2 py-1 mb-1 rounded-full w-max bg-stone-700 text-[13px]">
+                        <div className="px-2 py-1 mb-1 rounded-full w-max bg-slate-600 text-[13px]">
                           <span className={item?.style}>{item?.diff}</span>
                         </div>
                         <div className="line-clamp-2">
@@ -85,7 +85,7 @@ const Dashboard = () => {
                             {solvedProblems[0]?.title}
                           </p>
                         </div>
-                        <div className="px-2 py-1 mb-1 rounded-full w-max bg-stone-700 text-[13px]">
+                        <div className="px-2 py-1 mb-1 rounded-full w-max bg-slate-700 text-[13px]">
                           <span className={solvedProblems[0]?.style}>
                             {solvedProblems[0]?.diff}
                           </span>
