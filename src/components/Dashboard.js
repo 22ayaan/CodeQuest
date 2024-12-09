@@ -6,16 +6,15 @@ import { useState, useEffect } from "react";
 
 const Dashboard = () => {
   const [fname, setFname] = useState(null);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fname = localStorage.getItem("fname");
     if (fname) {
       setFname(fname);
+    } else {
+      navigate("/sign-up");
     }
-    // else {
-    //   navigate("/sign-up");
-    // }
   }, []);
   return (
     <div>
