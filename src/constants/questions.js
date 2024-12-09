@@ -1,41 +1,24 @@
-export const javascriptDefault = `/**
-* Problem: Binary Search: Search a sorted array for a target value.
-*/
+export const javascriptDefault = `
+/**
+ * Given 2 integers, return the sum of those integers.
+ */
 
-// Time: O(log n)
-// const binarySearch = (arr, target) => {
-//  return binarySearchHelper(arr, target, 0, arr.length - 1);
-// };
+// Solve here:
+const sum = (num1, num2) => {
+  // TODO
+};
 
-// const binarySearchHelper = (arr, target, start, end) => {
-//  if (start > end) {
-//    return false;
-//  }
-//  let mid = Math.floor((start + end) / 2);
-//  if (arr[mid] === target) {
-//    return mid;
-//  }
-//  if (arr[mid] < target) {
-//    return binarySearchHelper(arr, target, mid + 1, end);
-//  }
-//  if (arr[mid] > target) {
-//    return binarySearchHelper(arr, target, start, mid - 1);
-//  }
-// };
-
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// const target = 5;
-// console.log(binarySearch(arr, target));
-console.log("helloworld");
+res = sum(2, 4);
+console.log(res);
 `;
 
 export const questions = [
   {
     id: 1,
-    title: "Two Sum",
+    title: "sum of 2 numbers",
     diff: "Easy",
     style: "!text-teal-400 font-semibold",
-    desc: "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.",
+    desc: "Given 2 integers, return the sum of those integers.",
   },
   {
     id: 2,
@@ -71,5 +54,16 @@ export const questions = [
     diff: "Hard",
     style: "!text-red-500 font-semibold",
     desc: "Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list. k is a positive integer less than or equal to the length of the linked list.",
+  },
+];
+
+export let solvedProblems = [
+  {
+    id: 1,
+    solvedStatus: false,
+    title: "sum of 2 numbers",
+    diff: "Easy",
+    style: "!text-teal-400 font-semibold",
+    desc: "Given 2 integers, return the sum of those integers.",
   },
 ];
